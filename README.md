@@ -1,16 +1,4 @@
-Donne moi une description en anglais de l'app
-Here's a ready-to-use description, from the GitHub "About" line up to a README block.
-
-About (short, ~1 line for GitHub)
-
-Android overlay for chess.com: reads the live board through accessibility, runs Stockfish on-device, and draws gradient arrows, evaluation and chess.com-style move grades on top of the game.
-
-Topics (GitHub tags) android chess stockfish overlay accessibility-service chess-com kotlin-free java arm64 chess-engine
-
-Long description
-
 ChessMod is a no-root Android overlay that watches a live chess.com game and helps you understand the position in real time.
-
 It never takes screenshots — chess.com is protected by FLAG_SECURE — so the board is reconstructed by walking the accessibility node tree (d7, empty / Black Rook on a8). From that position, a bundled Stockfish engine (arm64-v8a, executed as a local process) analyses the position and the result is drawn directly over the board: a themed gradient arrow for the suggested move, a compact evaluation chip, and BEST / MID / WORST badges for the top three lines.
 
 Moves are annotated with chess.com's own ten-grade scale (Brilliant, Great, Best, Excellent, Good, Book, Inaccuracy, Mistake, Blunder, Miss) through a win-probability model, so the feedback matches what the site itself would say — including per-grade counters for the current game.
